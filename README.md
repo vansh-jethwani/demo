@@ -11,9 +11,9 @@
 ![Gemini](https://img.shields.io/badge/AI-Google_Gemini-4285F4?style=for-the-badge&logo=google)
 ![ImageKit](https://img.shields.io/badge/ImageKit-Media-0F8BFF?style=for-the-badge)
 
-<h3>A Modern Full-Stack Real-Time Messaging Platform</h3>
+<h2>Lark</h2>
 
-Inspired by **WhatsApp**, **Telegram**, and **Messenger**, with an integrated **Gemini AI Assistant**.
+A Modern Full-Stack Real-Time Messaging Platform inspired by **WhatsApp**, **Telegram**, and **Messenger**, featuring an integrated **Gemini AI Assistant**.
 
 </div>
 
@@ -21,140 +21,82 @@ Inspired by **WhatsApp**, **Telegram**, and **Messenger**, with an integrated **
 
 # 📖 About
 
-**Lark** is a modern full-stack chat application built using the **MERN Stack**. It provides a fast, secure, and responsive messaging experience with real-time communication powered by **Socket.IO**.
+Lark is a modern full-stack messaging application built with the **MERN Stack**. It offers secure authentication, real-time communication, AI-powered conversations, cloud-based media sharing, and a responsive user experience.
 
-Unlike a basic chat application, Lark includes modern messaging features such as:
+The application is designed with a scalable architecture by separating the frontend and backend, making it suitable for production-ready deployment.
 
-- 🤖 AI-powered conversations using Google Gemini
-- 🔐 JWT Authentication with Email OTP Verification
-- 📷 Media sharing
-- 😀 Emoji reactions
-- 📌 Message pinning
-- ✏️ Message editing
-- 🗑️ Delete for Me / Delete for Everyone
-- 📤 Forward messages
-- ↩️ Reply to messages
-- 👤 Profile management
-- 🎨 Theme customization
-- 📱 Fully responsive interface
+---
 
-The project follows a scalable MERN architecture with completely separate frontend and backend codebases.
+# 📸 Screenshots
+
+> Create a folder named **screenshots** in the root of the project and place your images there.
+
+## Login
+
+```md
+![Login](screenshots/login.png)
+```
+
+---
+
+## Home
+
+```md
+![Home](screenshots/home.png)
+```
+
+---
+
+## AI Assistant
+
+```md
+![AI Chat](screenshots/ai-chat.png)
+```
+
+---
+
+## Profile Settings
+
+```md
+![Profile](screenshots/profile.png)
+```
+
+---
+
+## Mobile View
+
+```md
+![Mobile](screenshots/mobile-view.png)
+```
 
 ---
 
 # ✨ Features
 
-## 🔐 Authentication
-
-- JWT Authentication
-- Email OTP Verification
-- Secure Password Hashing
-- Protected Routes
-- Persistent Login
-- Logout Support
-
----
-
-## 💬 Messaging
-
-- One-to-One Chat
-- Real-Time Messaging
-- Instant Message Delivery
-- Read Receipts
-- Seen Status
-- Online / Offline Status
-- Typing Indicator
-- Conversation Sorting
-- Latest Chat on Top
-
----
-
-## 📝 Advanced Message Features
-
-- Reply to Messages
-- Forward Messages
-- Edit Messages
-- Delete for Me
-- Delete for Everyone
-- Emoji Reactions
-- Pin Messages
-- Multiple Pinned Messages
-- Context Menu
-- Selection Mode
-
----
-
-## 📂 Media Sharing
-
-- Images
-- Videos
-- Audio Files
-- Documents
-- Media Preview
-- Download Media
-- ImageKit Cloud Storage
-
----
-
-## 🤖 AI Assistant
-
-- Powered by Google Gemini
-- Dedicated AI Conversation
-- AI Chat History
-- Instant Responses
-- Modern AI Interface
-
----
-
-## 👤 User Profile
-
-- Edit Profile
-- Change Profile Picture
-- Update Name
-- Update Username
-- Bio
-- Delete Account
-- Profile Settings
-
----
-
-## 🎨 User Experience
-
-- Responsive Design
-- Dark Theme
-- Light Theme
-- Multiple Theme Presets
-- Smooth Animations
-- Beautiful UI
-- Mobile Friendly
-
----
-
-## ⚡ Real-Time Features
-
-- Socket.IO Integration
-- Live Messaging
-- Live User Presence
-- Live Typing
-- Instant Message Updates
-- Automatic Conversation Refresh
-
----
-
-## 🔒 Security
-
-- JWT Authentication
-- Password Hashing
-- Protected APIs
-- Secure File Upload
-- Authentication Middleware
-- Input Validation
+- 🔐 JWT Authentication with Email OTP Verification
+- 💬 Real-Time One-to-One Messaging
+- 🤖 Google Gemini AI Assistant
+- 📷 Image, Video, Audio & Document Sharing
+- ☁️ ImageKit Cloud Storage
+- 😀 Emoji Reactions
+- ↩️ Reply to Messages
+- 📤 Forward Messages
+- ✏️ Edit Messages
+- 🗑️ Delete for Me / Delete for Everyone
+- 📌 Pin & Unpin Messages
+- 🟢 Online/Offline Presence
+- ⌨️ Real-Time Typing Indicator
+- ✅ Read Receipts
+- 👤 Profile Management
+- 🎨 Light/Dark Mode & Theme Customization
+- 📱 Fully Responsive UI
+- 🐳 Docker Ready
 
 ---
 
 # 🛠 Tech Stack
 
-## 🎨 Frontend
+## Frontend
 
 - React 19
 - Vite
@@ -162,27 +104,23 @@ The project follows a scalable MERN architecture with completely separate fronte
 - Zustand
 - Axios
 - Socket.IO Client
-- HeroUI
 - Tailwind CSS
+- HeroUI
 - Lucide React
 
----
-
-## ⚙️ Backend
+### Backend
 
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
-- JWT
+- JWT Authentication
 - bcrypt
 - Socket.IO
 - Multer
 - ImageKit SDK
 - Google Gemini API
 - node-cron
-- dotenv
-- CORS
 
 ---
 
@@ -190,145 +128,72 @@ The project follows a scalable MERN architecture with completely separate fronte
 
 ```text
 Lark/
-├── .dockerignore
-├── .gitignore
+│
 ├── backend/
-│   ├── package.json
-│   ├── package-lock.json
-│   └── src/
-│       ├── controllers/
-│       │   ├── ai.controller.js
-│       │   ├── auth.controller.js
-│       │   ├── message.controller.js
-│       │   └── profile.controller.js
-│       │
-│       ├── lib/
-│       │   ├── cron.js
-│       │   ├── db.js
-│       │   ├── gemini.js
-│       │   ├── imagekit.js
-│       │   └── socket.js
-│       │
-│       ├── middlewares/
-│       │   ├── auth.middleware.js
-│       │   └── upload.middleware.js
-│       │
-│       ├── models/
-│       │   ├── aiMessage.model.js
-│       │   ├── message.model.js
-│       │   └── user.model.js
-│       │
-│       ├── routes/
-│       │   ├── ai.routes.js
-│       │   ├── auth.routes.js
-│       │   ├── message.routes.js
-│       │   └── profile.routes.js
-│       │
-│       └── index.js
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── lib/
+│   │   ├── middlewares/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── index.js
+│   │
+│   └── package.json
 │
 ├── frontend/
 │   ├── public/
-│   │   ├── auth.png
-│   │   ├── favicon.png
-│   │   ├── icons.svg
-│   │   └── logo.png
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── data/
+│   │   ├── hooks/
+│   │   ├── lib/
+│   │   ├── pages/
+│   │   ├── store/
+│   │   ├── styles/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
 │   │
-│   ├── package.json
-│   ├── vite.config.js
-│   │
-│   └── src/
-│       ├── components/
-│       │   ├── auth/
-│       │   ├── chat/
-│       │   └── profile/
-│       │
-│       ├── context/
-│       ├── data/
-│       ├── hooks/
-│       ├── lib/
-│       ├── pages/
-│       ├── store/
-│       ├── styles/
-│       ├── App.jsx
-│       ├── main.jsx
-│       └── index.css
+│   └── package.json
 │
 ├── Dockerfile
-└── README.md
+├── README.md
+└── screenshots/
 ```
 
 ---
 
-# 📸 Application Screenshots
+# 🚀 Why Lark?
 
-> Add screenshots of your application inside a **screenshots/** folder.
+Lark combines the best features of modern messaging platforms into a single application.
 
-```text
-screenshots/
-│
-├── login.png
-├── signup.png
-├── home.png
-├── ai-chat.png
-├── profile.png
-├── media-sharing.png
-├── themes.png
-├── mobile-view.png
-└── demo.gif
-```
-
-Example:
-
-```md
-## Login
-
-![Login](screenshots/login.png)
-
-## Home
-
-![Home](screenshots/home.png)
-
-## AI Assistant
-
-![AI](screenshots/ai-chat.png)
-```
-
----
-
-# 🌟 Key Highlights
-
-- 🚀 WhatsApp-like User Experience
-- 🤖 Gemini AI Integration
-- ⚡ Socket.IO Real-Time Communication
-- ☁️ ImageKit Cloud Media Storage
+- ⚡ Instant real-time messaging using Socket.IO
+- 🤖 Integrated AI assistant powered by Gemini
+- 📁 Secure cloud media storage with ImageKit
 - 🔐 JWT Authentication with Email OTP
-- 📱 Fully Responsive UI
-- 🎨 Multiple Themes
-- 🛠 Modular MERN Architecture
-- 🐳 Docker Ready
-- 📂 Clean Folder Structure
+- 🎨 Beautiful and responsive UI
+- 🏗️ Clean MERN architecture
+- 📱 Mobile-friendly experience
+- 🐳 Easy deployment with Docker
 
 ---
 
 
-# 🚀 Getting Started
+# ⚙️ Installation
 
-## 📋 Prerequisites
+## Prerequisites
 
-Make sure you have the following installed before running the project:
+Make sure the following are installed on your system:
 
 - Node.js (v20 or later)
 - npm
 - MongoDB
 - Git
-- ImageKit Account
-- Google Gemini API Key
 
 ---
 
-# ⚙️ Installation
-
-## 1️⃣ Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/vansh-jethwani/Lark.git
@@ -337,29 +202,29 @@ cd Lark
 
 ---
 
-## 2️⃣ Backend Setup
+## Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside the **backend** folder.
+Create a `.env` file inside the `backend` folder.
 
 ```env
 PORT=3000
 
 MONGODB_URI=your_mongodb_connection_string
 
-JWT_SECRET=your_super_secret_key
+JWT_SECRET=your_jwt_secret
 
 CLIENT_URL=http://localhost:5173
 
-IMAGEKIT_PUBLIC_KEY=
-IMAGEKIT_PRIVATE_KEY=
-IMAGEKIT_URL_ENDPOINT=
+IMAGEKIT_PUBLIC_KEY=your_public_key
+IMAGEKIT_PRIVATE_KEY=your_private_key
+IMAGEKIT_URL_ENDPOINT=your_url_endpoint
 
-GEMINI_API_KEY=
+GEMINI_API_KEY=your_gemini_api_key
 
 NODE_ENV=development
 ```
@@ -370,7 +235,7 @@ Start the backend server.
 npm run dev
 ```
 
-Backend will run on
+Backend runs on:
 
 ```
 http://localhost:3000
@@ -378,7 +243,7 @@ http://localhost:3000
 
 ---
 
-## 3️⃣ Frontend Setup
+## Frontend Setup
 
 Open another terminal.
 
@@ -387,19 +252,19 @@ cd frontend
 npm install
 ```
 
-Create a `.env` file.
+Create a `.env` file inside the `frontend` folder.
 
 ```env
 VITE_API_URL=http://localhost:3000/api
 ```
 
-Run the frontend.
+Start the frontend.
 
 ```bash
 npm run dev
 ```
 
-Frontend will run on
+Frontend runs on:
 
 ```
 http://localhost:5173
@@ -407,359 +272,15 @@ http://localhost:5173
 
 ---
 
-# 📁 Folder Explanation
-
-## Backend
-
-### controllers/
-
-Contains all business logic.
-
-- Authentication
-- Messages
-- AI
-- Profile
-
----
-
-### lib/
-
-Contains reusable services.
-
-- MongoDB connection
-- Socket.IO
-- ImageKit
-- Gemini
-- Cron jobs
-
----
-
-### middlewares/
-
-Contains middleware functions.
-
-- JWT Authentication
-- File Upload
-
----
-
-### models/
-
-Contains MongoDB models.
-
-- User
-- Message
-- AI Message
-
----
-
-### routes/
-
-Defines all REST API routes.
-
----
-
-## Frontend
-
-### components/
-
-Reusable UI components.
-
-Contains
-
-- Authentication Components
-- Chat Components
-- Profile Components
-
----
-
-### pages/
-
-Contains complete pages.
-
-- Authentication
-- Chat
-- Profile Settings
-
----
-
-### context/
-
-Theme Context.
-
----
-
-### hooks/
-
-Reusable React Hooks.
-
----
-
-### store/
-
-Zustand global state management.
-
----
-
-### lib/
-
-Axios configuration.
-
-Utility functions.
-
-ImageKit helper.
-
----
-
-### styles/
-
-Custom HeroUI themes.
-
----
-
-# 🔄 Application Flow
-
-```text
-User
- │
- ▼
-Signup/Login
- │
- ▼
-Email OTP Verification
- │
- ▼
-JWT Token Generated
- │
- ▼
-JWT Stored in Browser
- │
- ▼
-Protected API Request
- │
- ▼
-Backend Authentication Middleware
- │
- ▼
-MongoDB
- │
- ▼
-Socket.IO Connection
- │
- ▼
-Conversation List
- │
- ▼
-Open Chat
- │
- ▼
-Load Messages
- │
- ▼
-Realtime Messaging
- │
- ▼
-ImageKit Uploads
- │
- ▼
-Gemini AI (Optional)
- │
- ▼
-Realtime Updates
-```
-
----
-
-# 📡 REST API
-
-## Authentication
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | `/api/auth/signup` | Register a new user |
-| POST | `/api/auth/login` | Login |
-| POST | `/api/auth/logout` | Logout |
-| POST | `/api/auth/send-otp` | Send Email OTP |
-| POST | `/api/auth/verify-otp` | Verify OTP |
-| GET | `/api/auth/check` | Verify JWT |
-
----
-
-## Messages
-
-| Method | Endpoint |
-|---------|----------|
-| GET | `/api/messages/users` |
-| GET | `/api/messages/conversations` |
-| GET | `/api/messages/:id` |
-| POST | `/api/messages/send/:id` |
-| PATCH | `/api/messages/edit/:id` |
-| DELETE | `/api/messages/delete/:id` |
-| PATCH | `/api/messages/read/:id` |
-| PATCH | `/api/messages/pin/:id` |
-| PATCH | `/api/messages/reaction/:id` |
-| POST | `/api/messages/forward` |
-
----
-
-## AI
-
-| Method | Endpoint |
-|---------|----------|
-| POST | `/api/ai/chat` |
-| GET | `/api/ai/history` |
-
----
-
-## Profile
-
-| Method | Endpoint |
-|---------|----------|
-| GET | `/api/profile` |
-| PATCH | `/api/profile` |
-| DELETE | `/api/profile` |
-
----
-
-# ⚡ Socket.IO Events
-
-## Client → Server
-
-| Event | Purpose |
-|---------|---------|
-| sendMessage | Send new message |
-| typing | Typing indicator |
-| stopTyping | Stop typing |
-
----
-
-## Server → Client
-
-| Event | Purpose |
-|---------|---------|
-| newMessage | Receive message |
-| messageEdited | Message edited |
-| messageDeleted | Message deleted |
-| reactionUpdated | Emoji reaction updated |
-| pinUpdated | Pin/unpin message |
-| typing | User typing |
-| stopTyping | User stopped typing |
-| onlineUsers | Online user list |
-
----
-
-# 🧠 AI Assistant
-
-Lark includes an integrated **Gemini AI Assistant**.
-
-Features include:
-
-- Dedicated AI conversation
-- Instant responses
-- Persistent AI chat history
-- Context-aware conversations
-- Clean AI interface
-
----
-
-# 📤 Media Sharing
-
-Supported media types
-
-- Images
-- Videos
-- Audio
-- Documents
-
-Features
-
-- Preview before sending
-- Cloud upload using ImageKit
-- Download media
-- In-chat media player
-
----
-
-# 🎨 Theme System
-
-Users can personalize the application with:
-
-- Light Mode
-- Dark Mode
-- HeroUI Theme Presets
-- Accent Colors
-- Smooth Theme Switching
-
----
-
-# 👤 Profile Management
-
-Users can
-
-- Change profile picture
-- Update name
-- Update username
-- Edit bio
-- Delete account
-- Manage profile settings
-
----
-
-# 🔒 Security
-
-Lark follows several security practices.
-
-- JWT Authentication
-- Password Hashing
-- Protected Routes
-- Authentication Middleware
-- Secure File Upload
-- Input Validation
-- MongoDB Validation
-- Environment Variables
-- CORS Protection
-
----
-
-# 📊 Database Collections
-
-```text
-users
-
-messages
-
-aiMessages
-```
-
----
-
-# 💾 Media Storage
-
-Lark uses **ImageKit** for media storage.
-
-Benefits
-
-- Fast CDN
-- Optimized delivery
-- Secure uploads
-- Scalable storage
-
----
-
-
 # 🐳 Docker
 
-Lark is Docker-ready and can be containerized for deployment.
-
-## Build Docker Image
+Build the Docker image:
 
 ```bash
 docker build -t lark .
 ```
 
----
-
-## Run Docker Container
+Run the container:
 
 ```bash
 docker run -p 3000:3000 --env-file backend/.env lark
@@ -769,38 +290,13 @@ docker run -p 3000:3000 --env-file backend/.env lark
 
 # ☁️ Deployment
 
-You can deploy the project using the following services.
-
-## Frontend
-
-- Vercel
-- Netlify
-
----
-
-## Backend
-
-- Render
-- Railway
-- DigitalOcean
-
----
-
-## Database
-
-- MongoDB Atlas
-
----
-
-## Media Storage
-
-- ImageKit
-
----
-
-## AI
-
-- Google Gemini API
+| Service | Platform |
+|----------|----------|
+| Frontend | Vercel |
+| Backend | Render |
+| Database | MongoDB Atlas |
+| Media Storage | ImageKit |
+| AI | Google Gemini API |
 
 ---
 
@@ -828,246 +324,37 @@ You can deploy the project using the following services.
 
 ---
 
-# 📈 Performance
+# 🛣️ Roadmap
 
-Lark is designed to provide a fast and responsive messaging experience.
-
-### Optimizations
-
-- Socket.IO Real-Time Communication
-- Zustand Global State Management
-- Optimized React Rendering
-- ImageKit CDN
-- Lazy Loading Components
-- Efficient MongoDB Queries
-- Reusable Components
-- Modular Architecture
-
----
-
-# 🚀 Future Roadmap
-
-The following features are planned for future releases.
-
-### Communication
+Planned features for future releases:
 
 - 📞 Voice Calling
 - 🎥 Video Calling
 - 👥 Group Chats
-- 📢 Broadcast Messages
-- 📺 Screen Sharing
-
----
-
-### Messaging
-
-- Message Search
-- Starred Messages
-- Scheduled Messages
-- Disappearing Messages
-- Polls
-- Stickers
-- GIF Support
-
----
-
-### AI
-
-- AI Image Generation
-- AI Voice Assistant
-- Smart Replies
-- Conversation Summaries
-- AI Translation
-
----
-
-### Security
-
-- End-to-End Encryption
-- Two-Factor Authentication (2FA)
-- Login Activity
-- Device Management
-
----
-
-### Productivity
-
-- Calendar Integration
-- File Manager
-- Cloud Backup
-- Desktop Notifications
-
----
-
-# 🧪 Project Highlights
-
-✔ Modern MERN Architecture
-
-✔ JWT Authentication
-
-✔ Email OTP Verification
-
-✔ Google Gemini AI
-
-✔ Socket.IO Realtime Messaging
-
-✔ ImageKit Media Storage
-
-✔ Responsive UI
-
-✔ Advanced Message Features
-
-✔ Profile Management
-
-✔ Theme Customization
-
-✔ Docker Support
-
----
-
-# 📸 Recommended Screenshots
-
-For the best GitHub presentation, add the following screenshots.
-
-```
-screenshots/
-│
-├── login.png
-├── signup.png
-├── otp.png
-├── home.png
-├── sidebar.png
-├── ai-chat.png
-├── media-sharing.png
-├── reply.png
-├── reactions.png
-├── pinned-message.png
-├── profile-settings.png
-├── themes.png
-├── mobile-view.png
-└── demo.gif
-```
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-
-2. Create your feature branch
-
-```bash
-git checkout -b feature/new-feature
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push the branch
-
-```bash
-git push origin feature/new-feature
-```
-
-5. Open a Pull Request
-
----
-
-# 🐞 Reporting Issues
-
-If you encounter any bugs or have suggestions for improvements:
-
-- Open an issue on GitHub.
-- Clearly describe the problem.
-- Include screenshots if possible.
-- Mention steps to reproduce the issue.
-
----
-
-# 🙏 Acknowledgements
-
-Special thanks to the technologies that power Lark.
-
-- React
-- Vite
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- Socket.IO
-- JWT
-- HeroUI
-- Tailwind CSS
-- Zustand
-- ImageKit
-- Google Gemini API
-
----
-
-# 📚 Learning Objectives
-
-Lark was built to gain hands-on experience with:
-
-- Full-Stack MERN Development
-- REST API Design
-- Authentication using JWT
-- Email OTP Verification
-- Real-Time Communication
-- Socket.IO
-- Cloud Media Storage
-- AI Integration
-- State Management
-- Docker
-- Responsive UI Design
+- 🔍 Message Search
+- ⭐ Starred Messages
+- 🔐 End-to-End Encryption
+- 🤖 AI Image Generation
 
 ---
 
 # 👨‍💻 Author
 
-## Vansh Jethwani
+**Vansh Jethwani**
 
-Computer Science Undergraduate
+Computer Science Undergraduate passionate about Full-Stack Development, Backend Engineering, Artificial Intelligence, Cloud Computing, and DevOps.
 
-Passionate about
+**GitHub**
 
-- Full Stack Development
-- Backend Engineering
-- Artificial Intelligence
-- Cloud Computing
-- DevOps
-
-GitHub
-
-```
+```text
 https://github.com/vansh-jethwani
 ```
 
-Project Repository
+**Project Repository**
 
-```
+```text
 https://github.com/vansh-jethwani/Lark
 ```
-
----
-
-# ⭐ Support the Project
-
-If you found this project useful,
-
-⭐ Star the repository
-
-🍴 Fork it
-
-🛠 Contribute
-
-📢 Share it with others
-
-Your support motivates future improvements.
 
 ---
 
@@ -1081,9 +368,7 @@ Feel free to use, modify, and learn from this project for educational purposes.
 
 <div align="center">
 
-# 🚀 Thank You for Visiting Lark
-
-### If you like this project, don't forget to ⭐ Star the repository!
+### ⭐ If you found this project helpful, consider giving it a star!
 
 Made with ❤️ by **Vansh Jethwani**
 
