@@ -1,4 +1,4 @@
-# 🚀 Lark
+# 🚀 Lark!
 
 <div align="center">
 
